@@ -1,5 +1,5 @@
 package exercise.functionalprogramming;
-
+@FunctionalInterface
 public interface IOperation {
-    void execute(Double x, Double y);
+    Double execute(Double x, Double y);
 }
