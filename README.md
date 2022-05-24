@@ -8,7 +8,7 @@ Handled streams using lambda functions
 Clone the repository with the command:
 
 ```bash
-git clone https://github.com/jpabloallin/CRUD-Challenge-BackEndf.git
+git clone https://github.com/jpabloallin/Functional-Programming-Calculator.git
 ```
 
 
