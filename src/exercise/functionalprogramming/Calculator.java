@@ -46,6 +46,12 @@ public class Calculator {
         };
         sumOperation.calculateSum(3.0,5.0);
         subtractionOperation.calculateSubtraction(10.0,25.0);
+        multiplicationOperation.calculateMultiplication(6.0,5.0);
+        divisionOperation.calculateDivision(5.0,1.0);
+        System.out.println("My array of numbers: ");
+        numbers.stream().forEach(number -> System.out.println(number + " "));
+        System.out.println("\nNumbers higher than 7: ");
+        numbers.stream().filter(number -> number > 7).forEach(System.out::println);
     }
 }
 
