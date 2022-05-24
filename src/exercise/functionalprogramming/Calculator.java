@@ -9,7 +9,7 @@ public class Calculator {
         /*
         *Created an object from IAddition interface and applied its method in order to define the sum operation.
         */
-        IAddition sumOperation = (x, y) -> {
+        IOperation sumOperation = (x, y) -> {
             Double sumResult = x+y;
             numbers.add(0, sumResult);
             System.out.println("Sum result is: " + sumResult);
@@ -17,7 +17,7 @@ public class Calculator {
         /*
          *Created an object from ISubtraction interface and applied its method in order to define the subtraction equation.
          */
-        ISubtraction subtractionOperation = (x, y) -> {
+        IOperation subtractionOperation = (x, y) -> {
             Double subResult = x-y;
             numbers.add(1, subResult);
             System.out.println("Subtraction result is: " + subResult);
@@ -25,7 +25,7 @@ public class Calculator {
         /*
          *Created an object from IMultiplication interface and applied its method in order to define the multiplication equation.
          */
-        IMultiplication multiplicationOperation = (x, y) -> {
+        IOperation multiplicationOperation = (x, y) -> {
             Double multiplicationResult = x*y;
             numbers.add(2, multiplicationResult);
             System.out.println("Multiplication result is: " + multiplicationResult);
@@ -33,7 +33,7 @@ public class Calculator {
         /*
          *Created an object from IDivision interface and applied its method in order to define the division equation.
          */
-        IDivision divisionOperation = (x, y) -> {
+        IOperation divisionOperation = (x, y) -> {
             try {
                 if (y == 0)
                     throw new ArithmeticException("Exception: divide by zero.\n");
@@ -44,10 +44,10 @@ public class Calculator {
                 System.out.println(e.getMessage());
             }
         };
-        sumOperation.calculateSum(3.0,5.0);
-        subtractionOperation.calculateSubtraction(10.0,25.0);
-        multiplicationOperation.calculateMultiplication(6.0,5.0);
-        divisionOperation.calculateDivision(5.0,1.0);
+        sumOperation.execute(60.2, 55.2);
+        subtractionOperation.execute(10.0,25.0);
+        multiplicationOperation.execute(6.0,5.0);
+        divisionOperation.execute(5.0,1.0);
         System.out.println("My array of numbers: ");
         numbers.stream().forEach(number -> System.out.println(number + " "));
         System.out.println("\nNumbers higher than 7: ");
