@@ -1,5 +1,5 @@
 package exercise.functionalprogramming;
-
+@FunctionalInterface
 public interface IAddition {
-    public void calculateSum(Double x, Double y);
+    void calculateSum(Double x, Double y);
 }
