@@ -52,6 +52,8 @@ public class Calculator {
         numbers.stream().forEach(number -> System.out.println(number + " "));
         System.out.println("\nNumbers higher than 7: ");
         numbers.stream().filter(number -> number > 7).forEach(System.out::println);
+        System.out.println("\nEven or Odd numbers: ");
+        numbers.stream().map(number -> number % 2 == 0 ? number + " Even number": number + " Odd number").forEach(System.out::println);
     }
 }
 
