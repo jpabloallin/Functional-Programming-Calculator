@@ -9,10 +9,10 @@ public class Calculator {
         /*
          *Created an object from ISubtraction interface and applied its method in order to define the subtraction operation.
          */
-        ISubtraction subtractionOperation = (x, y) -> x-y;
+        ISubtraction subtractionOperation = (x, y) -> System.out.println(("Subtraction result is: " + (x - y <0 ?  x-y + "\nResult is negative"  : x-y + "\nResult is positive")));
 
         sumOperation.calculateSum(3.0,5.0);
-        //System.out.println( subtractionOperation.calculateSubtraction(50.0,5.0));
+        subtractionOperation.calculateSubtraction(10.0,25.0);
     }
 }
 
